@@ -1,0 +1,147 @@
+.hero-img {
+    max-width: 60rem;
+    position: absolute;
+    top: 20vh;
+    right: 215vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .section-header {
+    position: relative;
+    top: 8rem;
+    left: 36rem;
+    background-color: var(--main-color);
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: var(--gray-dark);
+    border-radius: 0.5rem;
+  }
+  
+  .notes-align {
+    display: flex;
+  }
+  
+  .sidebar-align {
+    flex: 0.3;
+  }
+  
+  .container-main {
+    min-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+    position: absolute;
+    top: 45vh;
+    left: 79vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .notes-menu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+  }
+  
+  .notes-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    list-style: none;
+  }
+  
+  .container-editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0.5rem;
+    gap: 1.5rem;
+  }
+  
+  .container-ntitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .btn-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .material-icons,
+  .material-icons-outlined {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .container-label {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .custom-label {
+    border: 1.5px solid var(--gray-mild);
+    background-color: var(--gray-lighter);
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+  }
+  
+  /* .conatiner-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  } */
+  
+  .section-subheading {
+    border: solid 2px var(--main-color);
+    border-radius: 0.5rem;
+    color: var(--gray-main);
+    position: relative;
+    right: 1rem;
+    bottom: 2rem;
+  }
+  
+  .date-n-time {
+    color: var(--green-dark);
+  }
+
+  .notes-menu {
+    padding: 0 1.5rem;
+    width: 100%;
+    color: var(--green-dark);
+  }
+
+  .jodit-status-bar {
+    visibility: hidden;
+  }
+
+  i.icon-pin {
+    color: var(--green-dark);
+    font-size: 3rem;
+  }
+
+  i.icon-pin-label {
+    color: var(--green-dark);
+    font-size: 3rem;
+    position: relative;
+    left: 52rem;
+    bottom: 2rem;
+  }
+  
+  .priority-tab select {
+    padding: 0.1rem;
+    border: 2px solid var(--green-dark);
+    font-weight: 700;
+  }
+
+  .App.dark .container-editor {
+    background-color: var(--gray-dark);
+  }
