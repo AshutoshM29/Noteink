@@ -1,0 +1,79 @@
+.landing-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    margin: 5rem;
+    overflow: hidden;
+  }
+  
+  .container-landing-page {
+    border: solid 0.2rem var(--gray-light);
+    border-radius: 4rem;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    box-shadow: var(--gray-dark);
+    background-color: var(--gray-back);
+    overflow: hidden;
+  }
+  
+  .content-landing-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+  
+  .text-invert {
+    color: var(--green-dark);
+    font-weight: bolder;
+  }
+  
+  .login-link {
+    text-decoration: underline;
+    color: var(--gray-dark);
+  }
+  
+  .heading-hero {
+    font-size: 6rem;
+    color: var(--gray-dark);
+  }
+  
+  .sub-heading {
+    font-size: 3.5rem;
+    font-weight: 400;
+  }
+  
+  .btn-primary-solid {
+    background: var(--main-color);
+    color: var(--gray-main);
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+  
+  .btn-primary-solid:hover {
+    background: var(--green-dark);
+    color: var(--white);
+  }
+  
+  .text-link {
+    color: var(--gray-dark);
+  }
+  
+  .text-link:hover {
+    color: var(--green-dark);
+  }
+  
+  .container-image {
+    width: 50%;
+  }
+  
+  .img-responsive {
+    width: 100%;
+  }
