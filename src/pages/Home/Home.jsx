@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { NavBar, Editor, NotesMenuBar, SearchBar, SideBar, FilterModal } from "../../components/index";
-import { useServices, useFilter, useAppTheme, useSearch, useAuth } from "../../context/index";
+import { NavBar, SearchBar, SideBar } from "../../components/index";
 import "./Home.css";
 
 const Home = () => {
