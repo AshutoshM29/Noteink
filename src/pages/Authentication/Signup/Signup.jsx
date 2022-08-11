@@ -53,7 +53,7 @@ const Signup = () => {
               </label>
               <input
                 className="input"
-                type={showPasswordIcon ? "text" : "password"}
+                type= "password"
                 id="password"
                 name="password"
                 placeholder="Enter password"
@@ -72,7 +72,7 @@ const Signup = () => {
               </label>
               <input
                 className="input"
-                type={showConfirmPasswordIcon ? "text" : "password"}
+                type= "password"
                 id="confirm-password"
                 name="confirm-password"
                 placeholder="Confirm your password"
