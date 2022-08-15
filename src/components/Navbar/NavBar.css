@@ -1,0 +1,79 @@
+.header {
+    box-shadow: none;
+    position: fixed;
+    height: 12vh;
+    width: 100%;
+    margin-left: 0rem;
+    border: none;
+    top: 0;
+    z-index: 99;
+  }
+  
+  .nav-bar {
+    height: 12vh;
+    background-color: var(--main-color);
+    justify-content: flex-start;
+  }
+  
+  .nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .section-navr {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero-logo {
+    margin-top: 1rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .nav-hero-heading {
+    font-size: 3.2rem;
+    position: relative;
+    top: 0.8rem;
+    color: var(--white);
+  }
+  
+  .nav-hero-heading:hover {
+    color: var(--gray-lighter);
+  }
+  
+  .btn-secondary {
+    margin-top: 1rem;
+    color: var(--white);
+  }
+  
+  .btn-secondary:hover {
+    color: var(--gray-lighter);
+  }
+  
+  .header-items {
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem;
+    padding-top: 0.5rem;
+  }
+  
+  .simple-header .header .btn-theme {
+    box-shadow: none;
+    margin: 0;
+  }
+  
+  /* dark mode */
+  .App.dark .header {
+    background-color: var(--gray-main);
+  }
+  
+  .App.dark .nav-hero-heading {
+    color: var(--gray-dark);
+  }
+
+  .App.dark .btn-secondary {
+    color: var(--gray-dark);
+  }
