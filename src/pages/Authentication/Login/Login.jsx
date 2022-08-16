@@ -1,13 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../../context";
 import "../authentication.css"
 
 const Login = () => {
+  const initialFormDetails = {
+    email: "",
+    password: "",
+  };
+
+  const currentLocation = useNavigate();
+  const { loginUser, isAuthorized } = useAuth();
+  const [formDetails, setFormDetails] = useState(initialFormDetails);
+
+  const formDetailsHandler = () => {
+    loginUser(formDetails.email, formDetails.password);
+  };
+
+  function loginWithTestCredentials() {
+    setFormDetails({
+      email: "ashutoshrm01@gmail.com",
+      password: "Ashupass1234",
+    });
+  }
+
+  if (isAuthorized) {
+    currentLocation("/home");
+  }
+
   return (
     <div className="authentication-page">
       <article className="container-form login-form">
         <div className="authentication-container-form">
-          <form className="form">
+          <form className="form" onSubmit={(e) => e.preventDefault()}>
             <h2 className="h2">LOGIN</h2>
             <label htmlFor="email" className="input-label">
               Email Address:{" "}
@@ -20,6 +45,13 @@ const Login = () => {
                 id="email"
                 name="email"
                 placeholder="Enter Email ID"
+                value={formDetails?.email}
+                onChange={(e) =>
+                  setFormDetails((details) => ({
+                    ...details,
+                    email: e.target.value,
+                  }))
+                }
                 required
               />
             </div>
@@ -34,6 +66,13 @@ const Login = () => {
                 id="password"
                 name="password"
                 placeholder="Enter Password"
+                value={formDetails?.password}
+                onChange={(e) =>
+                  setFormDetails((details) => ({
+                    ...details,
+                    password: e.target.value,
+                  }))
+                }
                 required
               />
             </div>
@@ -55,13 +94,14 @@ const Login = () => {
               </Link>
             </div>
 
-            <button className="btn btn-primary-solid">
+            <button className="btn btn-primary-solid" onClick={formDetailsHandler}>
               Login
             </button>
             <button
               className="btn btn-primary-outline"
+              onClick={loginWithTestCredentials}
             >
-              Login with test credentials
+              Fill test credentials
             </button>
             <Link to="/signup" className="btn-link">
               Create New Account &gt;
