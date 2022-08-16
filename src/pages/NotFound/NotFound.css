@@ -8,10 +8,30 @@
   }
   
   .page-heading {
-    font-size: 6.25rem;
-    letter-spacing: 1.2rem;
+    font-size: 8rem;
+    letter-spacing: 1rem;
+  }
+
+  .btn-nfound {
+    background-color: var(--main-color);
+    border: solid 2px var(--main-color);
+    border-radius: 0.5rem;
+    font-weight: 800;
+  }
+
+  .btn-nfound:hover {
+    color: var(--gray-back);
+    
   }
   
   .page-subheading {
-    font-size: 1.25rem;
+    font-size: 2rem;
+  }
+
+  .App.dark .page-heading {
+    color: var(--gray-back);
+  }
+
+  .App.dark .page-subheading {
+    color: var(--white);
   }
