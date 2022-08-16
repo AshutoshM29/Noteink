@@ -28,6 +28,10 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+button:focus {
+  outline:none;
+}
+
 .btn {
   font-family: 'Dongle', sans-serif;
   font-family: 'Dosis', sans-serif;
