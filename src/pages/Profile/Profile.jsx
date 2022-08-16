@@ -1,10 +1,21 @@
 import React from 'react';
 import "./Profile.css";
+import { useEffect } from "react";
+import { useAppTheme, useAuth } from "../../context";
 import { NavBar } from '../../components';
 import "./Profile.css";
 import userImg from "../../asset/user.webp";
 
 const Profile = () => {
+const { theme } = useAppTheme();
+const { authUser } = useAuth();
+
+useEffect(() => {
+theme === "light"
+? (document.body.style.backgroundColor = "")
+: (document.body.style.backgroundColor = "var(--gray-dark)");
+}, [theme]);
+
 return (
 <div className="profile-page-wrapper">
   <NavBar />
@@ -18,11 +29,12 @@ return (
     <div className="profile-page-content">
       <div className="h4">
         <div>
-          <span className="text-invert text-bold">Name: </span>Ashutosh Mishra
+          <span className="text-invert text-bold">Name: </span>{" "}
+          {`${authUser.firstName} ${authUser.lastName}`}
         </div>
         <div>
           <span className="text-invert text-bold">Email Id: </span>
-          ashutoshrm01@gmail.com
+          {`${authUser.email}`}
         </div>
       </div>
     </div>
