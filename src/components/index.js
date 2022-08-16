@@ -2,3 +2,8 @@ export { NavBar } from "./Navbar/NavBar";
 export { NotesMenuBar } from "./NotesMenuBar/NotesMenuBar";
 export { SearchBar } from "./SearchBar/SearchBar";
 export { SideBar } from "./SideBar/SideBar";
+export { ColorPalette } from "./Modals/ColorPaletteModal/ColorPalette";
+export { FilterModal } from "./Modals/FilterModal/Filtermodal";
+export { LabelModal } from "./Modals/LabelModal/LabelModal";
+export { Editor } from "../components/Editor/Editor";
+export { RequiresAuth } from "../components/RequiresAuth/RequiresAuth";
