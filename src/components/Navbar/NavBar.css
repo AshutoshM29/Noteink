@@ -66,9 +66,6 @@
   }
   
   /* dark mode */
-  .App.dark .header {
-    background-color: var(--gray-main);
-  }
   
   .App.dark .nav-hero-heading {
     color: var(--gray-dark);
