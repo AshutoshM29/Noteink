@@ -1,9 +1,24 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth, useServices } from "../../context/index";
+import { useToast } from "../../custom-hooks/useToast";
 import "../SideBar/SideBar.css";
 import userImg from "../../asset/user.webp";
 
 const SideBar = () => {
+  const { authDispatch, authUser } = useAuth();
+  const navigate = useNavigate();
+  const { showToast } = useToast();
+  const { showEditorModal, setShowEditorModal } = useServices();
+
+  const logoutUser = () => {
+    showToast("Logout Successful", "success");
+    authDispatch({ type: "RESET_AUTH" });
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    localStorage.removeItem("app-theme");
+    navigate("/logout");
+  };
 
   return (
       <aside className="section-filter">
@@ -43,9 +58,10 @@ const SideBar = () => {
               <li>
                 <button
                   className="btn btn-primary-solid"
+                  onClick={() => setShowEditorModal(!showEditorModal)}
                 >
                   <i>
-                  Create New Note
+                    {showEditorModal ? "Close Editor" : "Create New Note"}
                   </i>
                 </button>
               </li>
@@ -58,9 +74,10 @@ const SideBar = () => {
                 <Link to="/profile">
                 <img src={userImg} alt="profile-img" className="avatar" />
                 </Link>
-                <p className="username">Ashutosh Mishra</p>
+                <p className="username">{" "}
+          {`${authUser.firstName} ${authUser.lastName}`}</p>
                 <button className="btn btn-icon">
-                  <i className="material-icons icon-profile">
+                  <i className="material-icons icon-profile" onClick={logoutUser}>
                     logout
                   </i>
                 </button>
