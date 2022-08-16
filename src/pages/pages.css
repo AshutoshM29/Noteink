@@ -94,12 +94,6 @@
     padding: 0.2rem;
   }
   
-  /* .conatiner-editor {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  } */
-  
   .section-subheading {
     border: solid 2px var(--main-color);
     border-radius: 0.5rem;
@@ -144,4 +138,8 @@
 
   .App.dark .container-editor {
     background-color: var(--gray-dark);
+  }
+
+  .App.dark .section-subheading {
+    color: var(--gray-back);
   }
