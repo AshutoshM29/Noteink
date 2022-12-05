@@ -1,6 +1,7 @@
 # Notein'K
 
-Meet your modern Note Taking App
+Meet your modern Note Taking App!
+
 Manage your daily tasks and workflow in a modern way and boost your efficiency without any efforts.
 
 You can check out [Notein'K](https://noteink.vercel.app/) here
