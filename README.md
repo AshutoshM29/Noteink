@@ -15,14 +15,24 @@ $ npm start
 ```
 
 ## Features
+
+Dark Mode
 - Home page
 - Authentication
   * Login
   * Sign up
   * Log out
 - Page not found
+- Add a new note
+- Rich text editor
+- Delete & edit notes
+- Filter notes
+- Add labels
+- Archive notes page
+- Trash notes page
+- Toggle dark mode
 
 ## Live Preview
 
 
-***This E-commerce website is made with the help of [cleanUI](https://clean-ui.netlify.app/)***
+***This Note taking App is made with the help of [cleanUI](https://clean-ui.netlify.app/)***
