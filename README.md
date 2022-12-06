@@ -17,7 +17,6 @@ $ npm start
 
 ## Features
 
-Dark Mode
 - Home page
 - Authentication
   * Login
